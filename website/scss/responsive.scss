@@ -1,0 +1,165 @@
+// `xxl` applies to x-large devices (large desktops, less than 1400px)
+@include media-breakpoint-down(xxl) {
+}
+
+// `xl` applies to large devices (desktops, less than 1200px)
+@include media-breakpoint-down(xl) {
+  .header__category-list {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    background-color: #fff;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    padding: 0;
+
+    &.active {
+      display: block;
+    }
+
+    .close {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      font-size: $font-size-icon-mobile;
+    }
+  }
+
+  .header__category-list-item {
+    a {
+      padding: 10px 0px;
+      border-bottom: 1px solid $border-color;
+    }
+  }
+
+  .header__category-sublist {
+    top: 100%;
+
+    &::before {
+      border-color: transparent transparent $primary-color transparent;
+    }
+
+    &:after {
+      top: -30px;
+    }
+  }
+
+  .header__bottom {
+    justify-content: space-between;
+  }
+
+  .header__location {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    select {
+      flex: 0.8;
+    }
+  }
+
+  .banner {
+    display: none;
+  }
+
+  .position-xl-relative {
+    position: relative;
+  }
+}
+
+// `lg` applies to medium devices (tablets, less than 992px)
+@include media-breakpoint-down(lg) {
+  .header__top-wrapper {
+    display: block;
+  }
+}
+
+// `md` applies to small devices (landscape phones, less than 768px)
+@include media-breakpoint-down(md) {
+  .header__location {
+    display: none;
+  }
+
+  .carousel-image {
+    height: auto !important;
+  }
+}
+
+// `sm` applies to x-small devices (portrait phones, less than 576px)
+@include media-breakpoint-down(sm) {
+  .overflow-x-scroll {
+    overflow-x: scroll;
+  }
+
+  .overflow-y-scroll {
+    overflow-y: scroll;
+  }
+
+  .w-sm-100 {
+    width: 100% !important;
+  }
+
+  .dropdown__overplay {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: unset;
+    width: 100vw !important;
+    height: 100vh !important;
+
+    &::before {
+      display: none;
+    }
+
+    .fa-solid.fa-xmark {
+      font-size: $font-size-icon-mobile;
+    }
+  }
+}
+
+// `sm` applies to x-small devices (portrait phones, greater than 576px)
+@include media-breakpoint-up(sm) {
+  .overflow-x-sm-scroll {
+    overflow-x: scroll;
+  }
+
+  .overflow-x-sm-hidden {
+    overflow-x: hidden;
+  }
+
+  .w-sm-25 {
+    width: 25% !important;
+  }
+
+  .w-sm-48 {
+    width: 48% !important;
+  }
+
+  .dropdown__overplay {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .position-sm-relative {
+    position: relative !important;
+  }
+
+  .w-sm-auto {
+    width: auto !important;
+  }
+}
+
+// 0 -> 575.98
+@include media-breakpoint-only(xs) {
+  .w-oxs-100 {
+    width: 100%;
+  }
+}
+
+// 576 -> 767.98
+@include media-breakpoint-only(sm) {
+}

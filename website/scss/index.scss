@@ -1,0 +1,112 @@
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css";
+
+@font-face {
+  font-family: "Menlo";
+  src: url("/fonts/Menlo-Regular.ttf") format("ttf");
+}
+
+$primary-color: rgba(247, 159, 142);
+$text-white-color: #ffffff;
+$text-black-color: #111111;
+$text-gray-color: rgba(129, 138, 145);
+$font-size-icon-mobile: 15px;
+
+$border-color: #e5e7eb;
+
+@import "./header.scss";
+@import "./responsive.scss";
+@import "./carousel.scss";
+@import "./banner.scss";
+@import "./product-card.scss";
+@import "./breakline.scss";
+@import "./product-section.scss";
+@import "./footer.scss";
+@import "./button.scss";
+@import "./input.scss";
+@import "./campaign.scss";
+@import "./select.scss";
+@import "./breadcumb.scss";
+@import "./product-detail.scss";
+@import "./tabs.scss";
+@import "./alert.scss";
+@import "./card.scss";
+@import "./collapse.scss";
+@import "./modal.scss";
+@import "./description.scss";
+@import "./preview-item.scss";
+@import "./toast.scss";
+@import "./dropdown.scss";
+@import "./cart-dropdown.scss";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  overflow-x: hidden;
+  font-size: 62.5%;
+  font-family: "Menlo", sans-serif;
+  position: relative;
+}
+
+i.fa-solid {
+  font-family: "Font Awesome 6 Free";
+}
+
+img {
+  object-fit: contain;
+}
+
+.more-products {
+  color: $primary-color;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+.primary-text-color {
+  color: $primary-color !important;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  background-color: transparent;
+  color: $primary-color !important;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $primary-color;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  // background: #555;
+  opacity: rgb(245, 136, 115);
+}
+
+.fa-solid.large {
+  display: inline-flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+.z-index-1000 {
+  z-index: 1000;
+}
